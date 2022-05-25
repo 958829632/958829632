@@ -1,0 +1,27 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+int main()
+{
+	int a = 0, b = 0, c = 0;
+	scanf("%d%d%d", &a, &b, &c);//a放最大，b次之，c最小；
+	if (a < b)
+	{
+		int mid = a;
+		a = b;
+		b = mid;
+	}
+	if (a < c)
+	{
+		int mid = a;
+		a = c;
+		c = mid;
+	}
+	if (b < c)
+	{
+		int mid = b;
+		b = c;
+		c = mid;
+
+	}
+	printf("%d%d%d", a, b, c);
+}
